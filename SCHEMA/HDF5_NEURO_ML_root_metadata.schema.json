@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/hdf5-neuro-ml/root-metadata-1.2.schema.json",
+  "title": "hdf5-neuro-ml root file attributes (profile 1.2)",
+  "description": "Entspricht den HDF5-Attributen an der Dateiwurzel /. Werte werden beim Lesen aus h5py-File.attrs übernommen; Typen können als String, Zahl oder Liste vorliegen.",
+  "type": "object",
+  "required": [
+    "format",
+    "format_version",
+    "device",
+    "sample_rate_hz",
+    "num_channels",
+    "start_timestamp",
+    "end_timestamp"
+  ],
+  "properties": {
+    "format": {
+      "type": "string",
+      "const": "hdf5-neuro-ml"
+    },
+    "format_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+(\\.[0-9]+)?$",
+      "examples": ["1.2"]
+    },
+    "device": {
+      "type": "string",
+      "examples": ["Conox", "BIS Advanced"]
+    },
+    "tower_id": {
+      "description": "Turm-/Standort-ID (String oder Zahl in HDF5)",
+      "type": ["string", "number", "integer"]
+    },
+    "tower_number": {
+      "type": "integer"
+    },
+    "sample_rate_hz": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "num_channels": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "start_timestamp": {
+      "description": "Unix-Zeit Sekunden (Fensteranfang)",
+      "type": "number"
+    },
+    "end_timestamp": {
+      "description": "Unix-Zeit Sekunden (Fensterende)",
+      "type": "number"
+    },
+    "created_at": {
+      "description": "ISO-8601 UTC",
+      "type": "string",
+      "format": "date-time"
+    },
+    "channels": {
+      "description": "Liste der Kanalnamen (in HDF5 oft als Array von Strings)",
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "processing_levels": {
+      "description": "Stufen der Wellenformverarbeitung, z.B. raw, device_internal",
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "additionalProperties": true
+}
