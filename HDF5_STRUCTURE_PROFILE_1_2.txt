@@ -1,0 +1,18 @@
+hdf5-neuro-ml — Profil 1.2 (Implementierung in der Pipeline)
+================================================================
+
+Interne HDF5-Struktur (Fensterdatei, typisch ~10 s EEG):
+
+/
+├── [Attribute an der Wurzel — siehe SCHEMA/HDF5_NEURO_ML_root_metadata.schema.json]
+├── time/
+│   └── timestamps          (Dataset, float64, Shape (N,))
+└── signals/
+    ├── channel_0           (Dataset, float32 bei Conox, int16 bei BIS)
+    └── channel_1 …         (optional, mehrkanalig BIS)
+
+Semantische Entsprechung zum logischen Standard:
+
+    /time/timestamps   <->   /raw/eeg/time/timestamps
+    /signals/channel_k <->   /raw/eeg/signals/channel_k
+
