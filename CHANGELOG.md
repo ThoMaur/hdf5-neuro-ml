@@ -1,4 +1,7 @@
 # Changelog
 
 ## v0.1.0
-- Initial structure
+
+- Initial repository structure
+- Basic specification draft
+- Schema and mapping placeholders
