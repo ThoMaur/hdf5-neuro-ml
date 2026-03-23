@@ -7,7 +7,7 @@ This repository contains the publication package for the EEG-only profile of the
 
 ## DOI
 
-https://doi.org/10.5281/zenodo.19190860
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19190860.svg)](https://doi.org/10.5281/zenodo.19190860)
 
 ## Scope
 
