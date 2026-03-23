@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: "hdf5-neuro-ml: A standard for EEG time-series data in HDF5 optimized for machine learning (Profile 1.2)"
+message: "If you use this standard, please cite it using the version-specific DOI once available."
+type: dataset
+authors:
+  - family-names: "Maurer"
+    given-names: "Thomas"
+version: "1.2.0"
+license: "CC-BY-4.0"
