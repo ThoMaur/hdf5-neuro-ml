@@ -2,25 +2,43 @@
 
 An HDF5-based standard for multimodal neurophysiology time-series data, optimized for machine learning and clinical interoperability.
 
+## Overview
+
+hdf5-neuro-ml is an open standard designed to bridge the gap between clinical neurophysiology data acquisition and machine learning workflows.
+
+It provides a unified, efficient, and extensible structure for storing and analyzing multimodal time-series data, including:
+
+- Electroencephalography (EEG)
+- Near-infrared spectroscopy (NIRS)
+- Nociception monitoring (NOL)
+- Train-of-four (TOF)
+- Vital and physiological parameters
+
 ## Motivation
 
-Current neurophysiology data formats are fragmented across clinical and research domains.
-This project aims to bridge the gap between clinical interoperability (e.g. DICOM EEG) and machine learning workflows.
+Current data formats are fragmented across clinical and research domains:
 
-## Features
+- Clinical standards (e.g. DICOM EEG) focus on interoperability but are not optimized for machine learning.
+- Research formats (e.g. EDF, NWB, BIDS) do not fully address real-time clinical data integration and multimodal intraoperative monitoring.
 
-- Multimodal time-series support (EEG, NIRS, NOL, TOF, vital parameters)
-- Unified time reference
+hdf5-neuro-ml aims to provide a lightweight, ML-ready data model that integrates both worlds.
+
+## Key Features
+
+- Unified time reference across all modalities
+- Support for heterogeneous sampling rates
 - Separation of raw signals and derived indices
-- Efficient chunked storage (HDF5)
-- ML-ready data access
+- Efficient chunked storage using HDF5
+- Optimized for machine learning pipelines
+- Compatible with open-source tools (Python, MATLAB, R, Julia)
+- Interoperability pathways to clinical standards (e.g. DICOM EEG)
 
-## Structure
+## Repository Structure
 
-- SPEC/ → Core specification
-- SCHEMA/ → Data schema definitions
-- EXAMPLES/ → Example datasets
-- MAPPINGS/ → Interoperability mappings
+- SPEC/ → Core specification of the standard
+- SCHEMA/ → Data model and schema definitions
+- EXAMPLES/ → Example datasets and usage
+- MAPPINGS/ → Mapping to/from existing standards (DICOM, EDF, etc.)
 
 ## Status
 
@@ -28,4 +46,8 @@ Draft – under active development
 
 ## Citation
 
-DOI will be added after first Zenodo release.
+A DOI will be assigned via Zenodo upon first release.
+
+## License
+
+See LICENSE file.
