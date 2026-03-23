@@ -1,53 +1,51 @@
-# hdf5-neuro-ml
+# hdf5-neuro-ml: A standard for EEG time-series data in HDF5 optimized for machine learning (Profile 1.2)
 
-An HDF5-based standard for multimodal neurophysiology time-series data, optimized for machine learning and clinical interoperability.
+hdf5-neuro-ml is an open standard for storing EEG time-series data in HDF5, designed for efficient analysis and direct integration into machine learning workflows.
 
-## Overview
+This repository contains the publication package for the EEG-only profile of the `hdf5-neuro-ml` standard, aligned with the current production implementation in the acquisition pipeline.
 
-hdf5-neuro-ml is an open standard designed to bridge the gap between clinical neurophysiology data acquisition and machine learning workflows.
+## Scope
 
-It provides a unified, efficient, and extensible structure for storing and analyzing multimodal time-series data, including:
+This release covers **EEG only**. Other modalities are explicitly out of scope for Profile 1.2.
 
-- Electroencephalography (EEG)
-- Near-infrared spectroscopy (NIRS)
-- Nociception monitoring (NOL)
-- Train-of-four (TOF)
-- Vital and physiological parameters
+## Normative specification
 
-## Motivation
+The specification in `SPEC/HDF5_NEURO_ML_STANDARD.md` is normative.  
+All compliant implementations MUST follow this specification.
 
-Current data formats are fragmented across clinical and research domains:
+## Repository contents
 
-- Clinical standards (e.g. DICOM EEG) focus on interoperability but are not optimized for machine learning.
-- Research formats (e.g. EDF, NWB, BIDS) do not fully address real-time clinical data integration and multimodal intraoperative monitoring.
+| Path | Description |
+|------|-------------|
+| `SPEC/HDF5_NEURO_ML_STANDARD.md` | Full normative specification |
+| `SCHEMA/HDF5_NEURO_ML_root_metadata.schema.json` | JSON Schema for root metadata |
+| `EXAMPLES/` | Example HDF5 files and generator script |
+| `MAPPINGS/README.md` | Placeholder for interoperability mappings |
+| `HDF5_STRUCTURE_PROFILE_1_2.txt` | ASCII tree of the current pipeline implementation |
+| `CHANGELOG.md` | Version history |
+| `LICENSE` | License for this package |
+| `CITATION.cff` | Citation metadata |
+| `.zenodo.json` | Zenodo metadata for DOI registration |
+| `ZENODO_CHECKLIST.md` | Pre-release checklist |
+| `requirements.txt` | Python dependencies for example generation |
 
-hdf5-neuro-ml aims to provide a lightweight, ML-ready data model that integrates both worlds.
+## Current implementation status
 
-## Key Features
+Profile 1.2 represents the current production implementation used in the data acquisition pipeline.
 
-- Unified time reference across all modalities
-- Support for heterogeneous sampling rates
-- Separation of raw signals and derived indices
-- Efficient chunked storage using HDF5
-- Optimized for machine learning pipelines
-- Compatible with open-source tools (Python, MATLAB, R, Julia)
-- Interoperability pathways to clinical standards (e.g. DICOM EEG)
+## Minimal valid file
 
-## Repository Structure
+A minimal valid file MUST contain:
 
-- SPEC/ → Core specification of the standard
-- SCHEMA/ → Data model and schema definitions
-- EXAMPLES/ → Example datasets and usage
-- MAPPINGS/ → Mapping to/from existing standards (DICOM, EDF, etc.)
+- root attributes as defined in the schema
+- `/time/timestamps`
+- at least one `/signals/channel_k` dataset
+- equal length across timestamps and all signal datasets
 
-## Status
+## How to cite
 
-Draft – under active development
-
-## Citation
-
-A DOI will be assigned via Zenodo upon first release.
+After publication on Zenodo, the version-specific DOI SHOULD be used for citation and reproducibility.
 
 ## License
 
-See LICENSE file.
+This package is released under CC BY 4.0 unless otherwise noted.
