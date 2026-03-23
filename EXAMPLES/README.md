@@ -1,3 +1,6 @@
+
+:::writing{variant=“standard” id=“66129”}
+
 Examples
 
 This directory contains reference EEG example files for the hdf5-neuro-ml standard (Profile 1.2).
