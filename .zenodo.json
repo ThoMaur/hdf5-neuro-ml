@@ -1,0 +1,25 @@
+{
+  "title": "hdf5-neuro-ml: A standard for multimodal neurophysiology time-series data optimized for machine learning",
+  "version": "0.1.0",
+  "upload_type": "software",
+  "description": "An open HDF5-based standard for multimodal neurophysiology time-series data, bridging clinical interoperability and machine learning workflows.",
+  "creators": [
+    {
+      "name": "Maurer, Thomas",
+      "affiliation": "University Medical Centre Mannheim",
+      "orcid": ""
+    }
+  ],
+  "keywords": [
+    "EEG",
+    "HDF5",
+    "multimodal",
+    "neurophysiology",
+    "machine learning",
+    "time-series",
+    "clinical data",
+    "interoperability"
+  ],
+  "license": "apache-2.0",
+  "access_right": "open"
+}
