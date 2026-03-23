@@ -51,4 +51,4 @@ After publication on Zenodo, the version-specific DOI SHOULD be used for citatio
 This package is released under CC BY 4.0 unless otherwise noted.
 
 
-DOI trigger v1.2.2
+DOI trigger v1.2.2.
