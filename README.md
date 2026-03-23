@@ -1,8 +1,13 @@
 # hdf5-neuro-ml: A standard for EEG time-series data in HDF5 optimized for machine learning (Profile 1.2)
 
+
 hdf5-neuro-ml is an open standard for storing EEG time-series data in HDF5, designed for efficient analysis and direct integration into machine learning workflows.
 
 This repository contains the publication package for the EEG-only profile of the `hdf5-neuro-ml` standard, aligned with the current production implementation in the acquisition pipeline.
+
+## DOI
+
+https://doi.org/10.5281/zenodo.19190860
 
 ## Scope
 
