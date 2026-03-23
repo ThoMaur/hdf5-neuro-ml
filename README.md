@@ -19,7 +19,7 @@ All compliant implementations MUST follow this specification.
 |------|-------------|
 | `SPEC/HDF5_NEURO_ML_STANDARD.md` | Full normative specification |
 | `SCHEMA/HDF5_NEURO_ML_root_metadata.schema.json` | JSON Schema for root metadata |
-| `EXAMPLES/` | Example HDF5 files and generator script |
+| `EXAMPLES/` | Real and synthetic EEG example files |
 | `MAPPINGS/README.md` | Placeholder for interoperability mappings |
 | `HDF5_STRUCTURE_PROFILE_1_2.txt` | ASCII tree of the current pipeline implementation |
 | `CHANGELOG.md` | Version history |
