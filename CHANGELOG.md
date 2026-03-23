@@ -1,7 +1,9 @@
 # Changelog
 
-## v0.1.0
+## v1.2.0
 
-- Initial repository structure
-- Basic specification draft
-- Schema and mapping placeholders
+- First public release of the EEG-only publication package
+- Normative specification for `hdf5-neuro-ml`
+- JSON Schema for root metadata
+- Example file generator included
+- Zenodo publication metadata prepared
